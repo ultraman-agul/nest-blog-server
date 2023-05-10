@@ -18,6 +18,6 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config); // 创建swagger文档
   SwaggerModule.setup('docs', app, document); // 设置swagger文档路径
-  await app.listen(3000);
+  await app.listen(9020);
 }
 bootstrap();
