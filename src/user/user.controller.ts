@@ -21,7 +21,8 @@ export class UserController {
   register(@Body() createUserDto: CreateUserDto) {
     return this.userService.register(createUserDto);
   }
-
+  
+  @UseInterceptors(ClassSerializerInterceptor) // 使用拦截器,此处可以拦截密码返回给前端
   @Get()
   findAll() {
     return this.userService.findAll();
